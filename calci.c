@@ -33,18 +33,18 @@
 
 int main()
 {
-    int sum, num1, num2;
+    int one, two, sub;
 
-    printf("Input First Number: \n");
-    scanf("%d", &num1);
-    printf("Input Second Number: \n");
-    scanf("%d", &num2);
+    printf("enter First Number: \n");
+    scanf("%d", &one);
+    printf("enter Second Number: \n");
+    scanf("%d", &two);
 
 
-    printf("First Num = %d, Second Num = %d \n",num1, num2);
+    printf("First Num = %d, Second Num = %d \n",one, two);
 
-    sum = num1 + num2;
+    sub = one - two;
 
-    printf("Sum = %d", sum);
+    printf("sub = %d", sub);
     return 0;
 }
