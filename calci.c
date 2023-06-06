@@ -1,17 +1,18 @@
 #include<stdio.h>
 int main()
 {
-    int sum = 0;
-    int num = 12;
-   int num1 = 30;
-    scanf("num= %d",&num);
-    printf("output=%d\n",num);
-    scanf("num1=%d",&num1);
-    printf("output=%d\n",num1);
-    sum=num+num1;
-    printf("addition=%d",sum);
+    int sum, num1, num2;
 
-    printf("hello world\n"); 
-    // this comment was added by Prafull
+    printf("Input First Number: \n");
+    scanf("%d", &num1);
+    printf("Input Second Number: \n");
+    scanf("%d", &num2);
+
+
+    printf("First Num = %d, Second Num = %d \n",num1, num2);
+
+    sum = num1 + num2;
+
+    printf("Sum = %d", sum);
     return 0;
 }
