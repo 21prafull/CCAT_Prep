@@ -1,4 +1,36 @@
 #include<stdio.h>
+
+/*
+ Add 
+ Sub
+ Mul 
+ Div
+
+ Operations
+
+ Functions
+
+ Macros
+
+ call
+
+ menu driven program
+
+    Input First Number:
+
+    Select Operation:
+    1. Add
+    2. Sub
+    3. Mul
+    4. Div
+
+    ...
+
+ loops
+
+*/
+
+
 int main()
 {
     int sum, num1, num2;
