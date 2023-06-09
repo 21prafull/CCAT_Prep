@@ -1,90 +1,66 @@
 #include<stdio.h>
 
-float areaofcircle(float r){
+
+float areaofcircle(float radius){
     return 3.14*radius*radius;
 }
 
-float areaofsquare(float s){
+float areaofsquare(float side){
     return side*side;
 }
-float areaofrectangle(float lb){
+float areaofrectangle(float length, float breadth){
     return length*breadth;
 }
-float areaoftraingle(float bh){
-    return base*height;
+float areaoftraingle(float base, float height){
+    return 0.5*base*height;
 }
-int main()
-{
 
-float pi=3.1415
+
+
+int main(){
 
 float ans,num1,num2;
 
 int choice=0;
 
-printf("enter first number:\n");
-scanf("%f,&num1");
+printf("Select shape:\n");
+printf("1.Circle\n 2.Square\n 3.Rectangle\n 4.Triangle\n ");
 
- printf("enter second number:\n");
- scanf("%f",&num2);
-  
-  printf("first num = %.2f,second num = %.2f",num1,num2);
-   
-   printf("select shapes:\n");
-   printf("1.Circle\n 2.Square\n 3.Rectangle\n 4.Triangle\n ");
-   scanf("%d",&choice);
-
-   switch(choice){
-    case 1: 
-           ans = circle(num1,num2);
-           break;
-    case 2:
-           ans = square(num1,num2);
-           break;
-
-    case 3:
-            ans = rectangle(num1,num2);
+scanf("%d",&choice);
+    switch(choice){
+        case 1: 
+            printf("enter radius:\n");
+            scanf("%f", &num1);
+            ans = areaofcircle(num1);
             break;
-    case 4:
-            ans = triangle(num1,num2);
-            break;
-    default:
-            printf("select correct option.");
-            break;
-         
-     }
-      printf("answer = %.2f\n",ans);
-       
-       while(1){
-        printf("add next operation/:");
-        printf("1.Circle\n 2.Square\n 3.Rectangle\n 4.Triangle\n 5.Exit\n");
-        scanf("%d",&choice);
-        if(choice==5){
-            break;
-
-        }
-        float num3 = 0;
-        printf("enter next number:\n");
-        scanf("%f", &num3);
-        switch(choice){
-            case 1:
-             ans = Circle(ans,num3);
-             break;
-            case 2:
-             ans = square(ans,num3);
-             break;
-            case 3:
-             ans = Rectangle(ans,num3);
-             break;
-             case 4:
-             ans = Triangle(ans,num3);
-             break;
-             default;
-             printf("select correct option.\n");
-             break;
         
-        }
-        printf("answer = %.2f\n", ans);
-       }
-       return 0;
-       }
+        case 2:
+            printf("enter side:\n");
+            scanf("%f", &num1);
+            ans = areaofsquare(num1);
+            break;
+
+        case 3:
+            printf("enter length:\n");
+            scanf("%f", &num1);
+
+            printf("enter breadth:\n");
+            scanf("%f",&num2);
+            ans = areaofrectangle(num1,num2);
+            break;
+        case 4:
+            printf("enter base:\n");
+            scanf("%f", &num1);
+
+            printf("enter height:\n");
+            scanf("%f",&num2);
+            ans = areaoftraingle(num1,num2);
+            break;
+        default:
+            printf("select correct option.");
+            break; 
+    }
+        printf("Area of selected shape = %.2f\n",ans);
+
+return 0;
+}
